@@ -1,11 +1,11 @@
-def read_shit(filename):
+def read_stuff(filename):
     with open(filename, 'r') as file:
         data = list(map(lambda x: x.split(','), file.read().split('\n')))
         return {row[0]: row[1:] for row in data}
         
 
-bigs = read_shit(r"BBC Sheet - Results.csv")
-littles = read_shit(r"BBC Sheet - Sheet2.csv")
+bigs = read_stuff(r"BBC Sheet - Results.csv")
+littles = read_stuff(r"BBC Sheet - Sheet2.csv")
 in_eachothers_list = []
 one_on_ones = []
 
@@ -44,7 +44,6 @@ homeless_littles = unpaired_littles - {l for _, l in loose_pairings}
 
     
 in_eachothers_list.sort(key=lambda x: x[2])
-8
 print(
 """
 clarification: lower score is better than a higher score...
