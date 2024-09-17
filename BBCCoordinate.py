@@ -4,8 +4,8 @@ def read_stuff(filename):
         return {row[0]: row[1:] for row in data}
         
 
-bigs = read_stuff(r"BBC Sheet - Results.csv")
-littles = read_stuff(r"BBC Sheet - Sheet2.csv")
+bigs = read_stuff(r"Results - Bigs.csv")
+littles = read_stuff(r"Results - Littles.csv")
 in_eachothers_list = []
 one_on_ones = []
 
